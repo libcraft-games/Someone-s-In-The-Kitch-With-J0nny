@@ -7,15 +7,12 @@ public class Game : MonoBehaviour
 {
     public Text potsOfSlopText;
 
-    public float potsOfSlop;
-    public float slopPerClick;
-
+    private SlopKitchenService _slopKitchenService;
     private AudioSource _audioSource;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        potsOfSlop = 0;
-        slopPerClick = 1;
+        _slopKitchenService = new();
         _audioSource = GetComponent<AudioSource>();
 
         if( _audioSource != null)
@@ -32,12 +29,12 @@ public class Game : MonoBehaviour
     public void Click()
     {
         _audioSource.Play();
-        potsOfSlop += slopPerClick;
+        _slopKitchenService.SlopButtonClick();
         UpdateScore();
     }
 
     private void UpdateScore()
     {
-        potsOfSlopText.text = $"Pots of Slop: {potsOfSlop}";
+        potsOfSlopText.text = $"Pots of Slop: {_slopKitchenService.potsOfSlop}";
     }
 }
