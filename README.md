@@ -1,4 +1,4 @@
-# Someone's In The Kitch With J0nny (working title)
+# Someone's In The Kitchen With J0nny (working title)
 
 Currently dumb clicker game with no mechanics.
 
