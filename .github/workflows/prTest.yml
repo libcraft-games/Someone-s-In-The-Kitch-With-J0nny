@@ -1,10 +1,10 @@
-name: Build Our Shit 💩
+name: Pull Request Tests 🧪
 
 on: [pull_request]
 
 jobs:
   build:
-    name: Build the slop kitchen
+    name: Test the slop kitchen 🐵
     runs-on: ubuntu-latest
     steps:
       # Checkout

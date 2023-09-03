@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build the slop kitchen
+    name: Build the slop kitchen 🐵
     runs-on: ubuntu-latest
     steps:
       # Checkout
