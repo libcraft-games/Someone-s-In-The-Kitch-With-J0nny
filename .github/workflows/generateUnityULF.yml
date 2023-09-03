@@ -1,4 +1,4 @@
-name: Do Unity License Things 🪪w
+name: Do Unity License Things 🪪
 
 on:
   schedule:
@@ -69,9 +69,8 @@ jobs:
         with:
           path: ${{ env.ULF_FILE }}
 
-      - name: Update secret UNITY_LICENSE
-        uses: hmanzur/actions-set-secret@v2.0.0
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
         with:
-          name: 'UNITY_LICENSE'
-          value: '${{ steps.ulfRead.outputs.content }}'
-          token: ${{ secrets.PAT }}
+          name: ${{ env.ULF_FILE }}
+          path: ${{ env.ULF_FILE }}
