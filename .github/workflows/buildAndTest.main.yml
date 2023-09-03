@@ -22,13 +22,14 @@ jobs:
             Library-
 
       # Test
-      #- name: Run tests
-      #  uses: game-ci/unity-test-runner@v2
-      #  env:
-      #    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-      #  with:
-      #    githubToken: ${{ secrets.GITHUB_TOKEN }}
-      #    unityVersion: 2022.3.0f1
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          unityVersion: 2022.3.0f1
+          testMode: EditMode
 
       # Build
       - name: Build project
