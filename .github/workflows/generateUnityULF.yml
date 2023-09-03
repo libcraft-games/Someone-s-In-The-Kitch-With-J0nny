@@ -2,7 +2,7 @@ name: Do Unity License Things 🪪
 
 on:
   schedule:
-  - cron: "0 0 * * 1"
+    - cron: "0 0 * * 1"
   workflow_dispatch:
 
 concurrency:
@@ -51,7 +51,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
 
       - name: Install node package, `unity-license-activate`
         run: npm install --global unity-license-activate
@@ -69,8 +69,9 @@ jobs:
         with:
           path: ${{ env.ULF_FILE }}
 
-      - name: Expose as artifact
-        uses: actions/upload-artifact@v2
+      - name: Update secret UNITY_LICENSE
+        uses: hmanzur/actions-set-secret@v2.0.0
         with:
-          name: ${{ env.ULF_FILE }}
-          path: ${{ env.ULF_FILE }}
+          name: "UNITY_LICENSE"
+          value: "${{ steps.ulfRead.outputs.content }}"
+          token: "${{ secrets.GITHUB_TOKEN }}"
