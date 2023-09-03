@@ -1,3 +1,4 @@
+name: Generate ULF File 🗃️
 on:
   workflow_dispatch: {}
 
