@@ -29,7 +29,7 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 2023.1.8f1
-          testMode: Standalone
+          testMode: EditMode
 
       # Build
       - name: Build project
