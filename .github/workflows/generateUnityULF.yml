@@ -19,7 +19,7 @@ jobs:
         run: npm install --global unity-license-activate
 
       - name: Activate the license
-        run: unity-license-activate "%UNITY_EMAIL%" "%UNITY_PASSWORD%" "${{ needs.request_alf.outputs.alf }}"
+        run: unity-license-activate "$UNITY_EMAIL" "$UNITY_PASSWORD" "${{ needs.request_alf.outputs.alf }}"
 
       - name: Read ulf
         id: ulfRead
