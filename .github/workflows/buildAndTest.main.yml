@@ -20,6 +20,7 @@ jobs:
           key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
             Library-
+            Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
 
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
