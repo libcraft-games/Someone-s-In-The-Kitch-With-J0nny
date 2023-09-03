@@ -28,7 +28,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          unityVersion: 2022.3.0f1
+          unityVersion: 2023.1.9f1
           testMode: Standalone
 
       # Build
@@ -40,7 +40,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: WebGL
-          unityVersion: 2022.3.0f1
+          unityVersion: 2023.1.9f1
 
       # Output
       - uses: actions/upload-artifact@v3
