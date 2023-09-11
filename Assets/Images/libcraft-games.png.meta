@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libcraft-games_0: -1959598368077873674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
