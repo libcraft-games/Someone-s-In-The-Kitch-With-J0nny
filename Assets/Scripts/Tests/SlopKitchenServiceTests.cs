@@ -17,24 +17,24 @@ public class SlopKitchenServiceTests
     [Test]
     public void SlopKitchenServiceCorrectlyInitializesValues()
     {
-        Assert.IsTrue(_service.slopPerClick.Equals(1));
-        Assert.IsTrue(_service.potsOfSlop.Equals(0));
+        Assert.IsTrue(_service.SlopPerClick.Equals(1));
+        Assert.IsTrue(_service.PotsOfSlop.Equals(0));
     }
 
     [Test]
     public void SlopKitchenServiceIncrementSpotsOfSlopBySlopPerClickValue()
     {
         _service.SlopButtonClick();
-        float firstSlopCount = _service.potsOfSlop;
-        _service.slopPerClick = 0;
+        float firstSlopCount = _service.PotsOfSlop;
+        _service.SlopPerClick = 0;
         _service.SlopButtonClick();
-        float secondSlopCount = _service.potsOfSlop;
-        _service.slopPerClick = 68;
+        float secondSlopCount = _service.PotsOfSlop;
+        _service.SlopPerClick = 68;
         _service.SlopButtonClick();
 
         Assert.AreEqual(firstSlopCount, 1);
         Assert.AreEqual(secondSlopCount, firstSlopCount);
-        Assert.AreEqual(_service.potsOfSlop, 69);
+        Assert.AreEqual(_service.PotsOfSlop, 69);
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use

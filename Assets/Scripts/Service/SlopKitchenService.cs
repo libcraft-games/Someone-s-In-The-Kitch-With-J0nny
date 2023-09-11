@@ -1,15 +1,36 @@
 public class SlopKitchenService
 {
-    public float potsOfSlop { get; private set; }
-    public float slopPerClick { get; set; }
+    public float PotsOfSlop { get; private set; }
+    public float SlopPerClick { get; set; }
+    public int TurkeyFriers { get; set; }
+
+    private const float TURKEY_FRIER_SLOP_VALUE = 1;
+    public int TurkeyFryerSlopCost = 20;
+
     public SlopKitchenService()
     {
-        potsOfSlop = 0;
-        slopPerClick = 1;
+        PotsOfSlop = 0;
+        SlopPerClick = 1;
+        TurkeyFriers = 0;
     }
 
     public void SlopButtonClick()
     {
-        potsOfSlop += slopPerClick;
+        PotsOfSlop += SlopPerClick;
+    }
+
+    public void CalculateAutoClicks()
+    {
+        PotsOfSlop += TurkeyFriers * TURKEY_FRIER_SLOP_VALUE;
+    }
+
+    public void PurchaseTurkeyFrier()
+    {
+        if (PotsOfSlop >= TurkeyFryerSlopCost)
+        {
+            PotsOfSlop -= TurkeyFryerSlopCost;
+            TurkeyFriers++;
+            TurkeyFryerSlopCost *= 2;
+        }
     }
 }

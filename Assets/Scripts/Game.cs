@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    public Text potsOfSlopText;
+    public Text PotsOfSlopText;
+    public Text TurkeyFrierCountText;
 
     private SlopKitchenService _slopKitchenService;
     private AudioSource _audioSource;
@@ -24,6 +25,7 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _slopKitchenService.CalculateAutoClicks();
     }
 
     public void Click()
@@ -35,6 +37,12 @@ public class Game : MonoBehaviour
 
     private void UpdateScore()
     {
-        potsOfSlopText.text = $"Pots of Slop: {_slopKitchenService.potsOfSlop}";
+        PotsOfSlopText.text = $"Pots of Slop: {_slopKitchenService.PotsOfSlop}";
+    }
+
+    private void PurchaseTurkeyFryer()
+    {
+        _slopKitchenService.PurchaseTurkeyFrier();
+        TurkeyFrierCountText.text = $"Turkey Friers - x{_slopKitchenService.TurkeyFriers} (cost {_slopKitchenService.TurkeyFryerSlopCost})";
     }
 }

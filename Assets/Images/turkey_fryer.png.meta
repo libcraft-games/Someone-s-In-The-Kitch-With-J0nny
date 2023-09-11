@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ea8a837787ba414a85fa9c347ad2877
+guid: c5ef027fff74f3b48acd442174b0e42a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1114780143947991945
-    second: slop_0
+      213: -8601194184388517169
+    second: turkey_fryer_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slop_0
+      name: turkey_fryer_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 576
-        height: 475
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98bcda272ae787f00800000000000000
-      internalID: 1114780143947991945
+      spriteID: fc2ed5bd57b62a880800000000000000
+      internalID: -8601194184388517169
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      slop_0: 1114780143947991945
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
